@@ -1,9 +1,9 @@
 package org.example.model;
 
 import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvDate;
 
 import java.text.DateFormatSymbols;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -22,17 +22,9 @@ public class Task {
     @CsvBindByName(column = "Дата начала")
     private String startDateStr;
 
+    @CsvBindByName(column = "Дата начала")
+    @CsvDate("yyyy-MM-dd")
     private Date startDate;
-
-    public void setStartDateStr(String startDateStr) {
-        this.startDateStr = startDateStr;
-        try {
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-            this.startDate = formatter.parse(startDateStr);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     public String getMonthYearKey() {
         Calendar cal = Calendar.getInstance();

@@ -27,6 +27,26 @@
             <version>1.5.4</version>
         </dependency>
 
+        <!-- Основной генератор SVG -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-svggen</artifactId>
+            <version>1.16</version>
+        </dependency>
+
+        <!-- DOM и XML поддержка -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-dom</artifactId>
+            <version>1.16</version>
+        </dependency>
+
+        <!-- Поддержка XML parsing -->
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.12.2</version>
+        </dependency>
     </dependencies>
 
 </project>
